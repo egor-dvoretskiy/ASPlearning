@@ -10,12 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Models\ViewComponents\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\ServiceItems\Edit.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
   </ItemGroup>
