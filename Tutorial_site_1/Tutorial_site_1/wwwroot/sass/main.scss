@@ -144,7 +144,7 @@
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 1200px;
+		width: 1920px;
 
 		@include breakpoint('<=xlarge') {
 			width: 1200px;
@@ -464,6 +464,7 @@
 		padding: 45px 0 45px 0;
 		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
 		color: #546b76;
+		background-color: aqua;
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 
 		h2 {
@@ -850,3 +851,9 @@
 			display: block;
 		}
 	}
+
+.img-block {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}

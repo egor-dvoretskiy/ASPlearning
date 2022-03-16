@@ -23,6 +23,10 @@ section, summary, time, mark, audio, video {
   vertical-align: baseline;
 }
 
+footer {
+  vertical-align: bottom;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -116,7 +120,7 @@ section:last-child,
 .container {
   margin: 0 auto;
   max-width: 100%;
-  width: 1200px;
+  width: 1920px;
 }
 @media screen and (max-width: 1680px) {
   .container {
@@ -1300,6 +1304,7 @@ section:last-child,
   padding: 45px 0 45px 0;
   text-shadow: 1px 1px 1px white;
   color: #546b76;
+  background-color: aqua;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 }
 #footer h2 {
@@ -1624,4 +1629,10 @@ section:last-child,
 }
 .div-box a {
   display: block;
+}
+
+.img-block {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
