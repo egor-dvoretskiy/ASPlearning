@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tutorial2", "tutorial2\tutorial2.csproj", "{0CF77786-2E8B-49DD-A1C3-DD09A8EDCACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial2", "tutorial2\Tutorial2.csproj", "{0CF77786-2E8B-49DD-A1C3-DD09A8EDCACF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{90B417EF-A9F4-41B4-AF28-5CD203F8755D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial2.Domain", "Tutorial2.Domain\Tutorial2.Domain.csproj", "{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{0CF77786-2E8B-49DD-A1C3-DD09A8EDCACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF77786-2E8B-49DD-A1C3-DD09A8EDCACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF77786-2E8B-49DD-A1C3-DD09A8EDCACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A} = {90B417EF-A9F4-41B4-AF28-5CD203F8755D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D3004D5-7572-492F-A373-66F91A64FB91}
