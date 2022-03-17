@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using tutorial2.Models;
+using Tutorial2.Domain.Entity;
 
 namespace tutorial2.Controllers
 {
@@ -20,7 +21,17 @@ namespace tutorial2.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            Car car = new Car()
+            {
+                Name = "Honda",
+                Model = "Civic",
+                Speed = 220,
+                Price = 17500,
+                Description = "Just a good car.",
+                DateCreate = new DateTime(2017, 9, 24)
+            };
+
+            return View(car);
         }
 
         public IActionResult Privacy()
