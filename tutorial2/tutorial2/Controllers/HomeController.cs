@@ -28,7 +28,8 @@ namespace tutorial2.Controllers
                 Speed = 220,
                 Price = 17500,
                 Description = "Just a good car.",
-                DateCreate = new DateTime(2017, 9, 24)
+                DateCreate = new DateTime(2017, 9, 24),
+                TypeCar = Tutorial2.Domain.Enum.TypeCar.Hatchback
             };
 
             return View(car);
