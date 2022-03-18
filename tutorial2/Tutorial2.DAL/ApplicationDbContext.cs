@@ -9,7 +9,7 @@ namespace Tutorial2.DAL
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
+            _ = this.Database.EnsureCreated();
         }
 
         public DbSet<Car> Car { get; set; }

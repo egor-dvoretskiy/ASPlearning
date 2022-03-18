@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tutorial2.DAL;
+using Tutorial2.DAL.Interfaces;
+using Tutorial2.DAL.Repositories;
 
 namespace tutorial2
 {
@@ -29,6 +31,8 @@ namespace tutorial2
 
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+
+            services.AddScoped<ICarRepository, CarRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
