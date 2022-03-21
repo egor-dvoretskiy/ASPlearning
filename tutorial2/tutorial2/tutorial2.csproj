@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Tutorial2.DAL\Tutorial2.DAL.csproj" />
     <ProjectReference Include="..\Tutorial2.Domain\Tutorial2.Domain.csproj" />
+    <ProjectReference Include="..\Tutorial2.Service\Tutorial2.Service.csproj" />
   </ItemGroup>
 
 </Project>
