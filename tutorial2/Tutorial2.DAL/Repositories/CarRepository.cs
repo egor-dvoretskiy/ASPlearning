@@ -48,5 +48,13 @@ namespace Tutorial2.DAL.Repositories
         {
             return this._context.Car.ToListAsync();
         }
+
+        public async Task<Car> Update(Car entity)
+        {
+            this._context.Car.Update(entity);
+            await this._context.SaveChangesAsync();
+
+            return entity;
+        }
     }
 }

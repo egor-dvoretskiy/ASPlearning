@@ -107,9 +107,9 @@ namespace Tutorial2.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<bool>> CreateCar(CarViewModel carViewModel)
+        public async Task<IBaseResponse<CarViewModel>> CreateCar(CarViewModel carViewModel)
         {
-            var baseResponse = new BaseResponse<bool>();
+            var baseResponse = new BaseResponse<CarViewModel>();
 
             try
             {
@@ -131,7 +131,7 @@ namespace Tutorial2.Service.Implementations
             }
             catch (Exception exception)
             {
-                return new BaseResponse<bool>()
+                return new BaseResponse<CarViewModel>()
                 {
                     Description = $"[CreateCar] : {exception.Message}",
                     StatusCode = Domain.Enum.StatusCode.InternalServerError,
@@ -163,6 +163,42 @@ namespace Tutorial2.Service.Implementations
                 return new BaseResponse<bool>()
                 {
                     Description = $"[DeleteCar] : {exception.Message}",
+                    StatusCode = Domain.Enum.StatusCode.InternalServerError,
+                };
+            }
+        }
+
+        public async Task<IBaseResponse<Car>> Edit(int id, CarViewModel model)
+        {
+            var baseResponse = new BaseResponse<Car>();
+            try
+            {
+                var car = await this.carRepository.Get(id);
+
+                if (car is null)
+                {
+                    baseResponse.StatusCode = Domain.Enum.StatusCode.CarNotfound;
+                    baseResponse.Description = "Car not found";
+                    return baseResponse;
+                }
+
+                car.Description = model.Description;
+                car.DateCreate = model.DateCreate;
+                car.Speed = model.Speed;
+                car.Model = model.Model;
+                car.Price = model.Price;
+                car.Name = model.Name;
+                car.TypeCar = model.TypeCar;
+
+
+                baseResponse.StatusCode = Domain.Enum.StatusCode.OK;
+                return baseResponse;
+            }
+            catch (Exception exception)
+            {
+                return new BaseResponse<Car>()
+                {
+                    Description = $"[Edit] : {exception.Message}",
                     StatusCode = Domain.Enum.StatusCode.InternalServerError,
                 };
             }

@@ -15,5 +15,7 @@ namespace Tutorial2.DAL.Interfaces
         Task<bool> Create(Car entity);
 
         Task<bool> Delete(Car entity);
+
+        Task<T> Update(T entity);
     }
 }
