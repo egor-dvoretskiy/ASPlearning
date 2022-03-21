@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial2.Domain", "Tutoria
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{98B4E1AB-0C3D-4CE7-B04F-8D4FB6605DB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial2.DAL", "Tutorial2.DAL\Tutorial2.DAL.csproj", "{423AA5E2-9C0C-4795-B87F-F0E052AA047D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial2.DAL", "Tutorial2.DAL\Tutorial2.DAL.csproj", "{423AA5E2-9C0C-4795-B87F-F0E052AA047D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{985301C9-D53D-4A9F-AD1E-C4CC9EA87F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial2.Service", "Tutorial2.Service\Tutorial2.Service.csproj", "{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{423AA5E2-9C0C-4795-B87F-F0E052AA047D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{423AA5E2-9C0C-4795-B87F-F0E052AA047D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{423AA5E2-9C0C-4795-B87F-F0E052AA047D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A796D069-0C4E-4A4E-AB1C-33D6A2A37D8A} = {90B417EF-A9F4-41B4-AF28-5CD203F8755D}
 		{423AA5E2-9C0C-4795-B87F-F0E052AA047D} = {98B4E1AB-0C3D-4CE7-B04F-8D4FB6605DB9}
+		{D9869B15-249F-4C6E-9D3F-EEEF4B3992D0} = {985301C9-D53D-4A9F-AD1E-C4CC9EA87F50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D3004D5-7572-492F-A373-66F91A64FB91}
