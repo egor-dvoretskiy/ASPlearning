@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Tutorial2.DAL;
 using Tutorial2.DAL.Interfaces;
 using Tutorial2.DAL.Repositories;
+using Tutorial2.Domain.Entity;
 using Tutorial2.Service.Implementations;
 using Tutorial2.Service.Interfaces;
 
@@ -19,12 +20,12 @@ namespace tutorial2
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -32,6 +33,8 @@ namespace tutorial2
             services.AddControllersWithViews();
 
             var connection = Configuration.GetConnectionString("DefaultConnection");
+            this.Configuration.Bind("ProjectSettings", new Config());
+
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 
             services.AddScoped<ICarRepository, CarRepository>();
