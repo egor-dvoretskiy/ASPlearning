@@ -1,22 +1,29 @@
 ﻿@using Tutorial2.Domain.Entity
 
 <header>
-    <nav>
-        <div id="header-nav-div">
-            <a asp-area="" asp-controller="Home" asp-action="Index">@Config.WebsiteName</a>
-            <ul id="header-nav-div-ulmenu">
-                <li>
-                    <a href="#">Authorization</a>
-                    <ul id="ulmenu-dynamiclist">
-                        <li>
-                            <a href="#">Log in</a>
-                        </li>
-                        <li>
-                            <a href="#">Registration</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" id="header-nav">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@Config.WebsiteName</a>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul id="navigation-menu">
+                    <li>                        
+                        <div id="container-brand-dropdown">
+                            <a class="navmenu-ref" href="#">Authorization</a>
+                            <div id="container-dropdown">
+                                <a href="#">Log in</a>
+                                <a href="#">Registration</a>
+                            </div>
+                        </div>                        
+                    </li>
+                    <li>
+                        <a class="navmenu-ref" asp-area="" asp-controller="Car" asp-action="GetCars">Cars</a>
+                    </li>
+                    <li>
+                        <a class="navmenu-ref" href="#">About</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </nav>
 </header>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 using Tutorial2.DAL.Interfaces;
 using Tutorial2.Domain.Entity;
@@ -24,7 +25,7 @@ namespace Tutorial2.Controllers
 
             if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
-                return View(response.Data);
+                return View(response.Data.ToList());
             }
 
             return RedirectToAction("Error");

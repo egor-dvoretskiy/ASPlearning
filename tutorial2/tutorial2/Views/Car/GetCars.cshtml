@@ -1,7 +1,7 @@
 ﻿@using Tutorial2.Domain.Entity
-@model IEnumerable<Car>
+@model List<Car>
 
-@if (Model != null)
+@*@if (Model != null)
 {
     @foreach (var car in Model)
     {
@@ -13,5 +13,30 @@
         <p>@car.Speed</p>
     }
 }
+*@
 
+<div class="row">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var car = Model[i];
+        <div class="row row-cols-q col-md-4 text-center">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class ="list-group-item">
+                        @car.Name
+                    </li>
+                    <li class ="list-group-item">
+                        Type: @car.TypeCar
+                    </li>
+                    <li class ="list-group-item">
+                        @car.Description
+                    </li>
+                    <li class ="list-group-item">
+                        Price: @car.Price $
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
 
